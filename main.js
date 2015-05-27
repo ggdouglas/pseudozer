@@ -3,13 +3,6 @@ var _ = require('lodash');
 
 var BLACKLIST_REGEX = /[\s|\x21-\x2F|\x3A-\x40|\x5B-\x60|\x7B-\x7E]/g; // ASCII punctuation code ranges
 
-var HTML_TAG_REGEX = /<[a-z][\s\S]*>/g;
-
-// checks to see if a string has at least one HTML tag
-function containsHTMLTag(str) {
-	return HTML_TAG_REGEX.test(str);
-}
-
 // translates a string to psuedo-lang
 // (eg. "Hello World" --> "Ħëłłø Ŵø®łð")
 function psuedoTranslate(str) {
